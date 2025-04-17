@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tafsir/ui/home_sura_screen.dart';
@@ -13,6 +15,7 @@ class QuranBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    return AppBar(title: Text(title), backgroundColor: primaryColor);
     return AppBar(
       shape: const ContinuousRectangleBorder(
         borderRadius: BorderRadius.only(

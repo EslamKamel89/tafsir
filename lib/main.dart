@@ -79,16 +79,17 @@ class _DlalatQuranState extends State<DlalatQuran> {
           foregroundColor: Colors.white, // 2
         ),
       ),
-      locale:
-          GetStorage().read(language) != null
-              ? Locale(GetStorage().read(language))
-              // : Get.deviceLocale,
-              : const Locale('ar'),
-      // locale: const Locale('ar'),
+      // locale:
+      //     GetStorage().read(language) != null
+      //         ? Locale(GetStorage().read(language))
+      //         // : Get.deviceLocale,
+      //         : const Locale('ar'),
+      locale: const Locale('ar'),
       translations: CurrentLocales(),
       debugShowCheckedModeBanner: false,
       title: 'دلالات القرآن',
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
+      home: const IntroScreen(),
       getPages: [
         GetPage(name: SelectLanguageScreen.id, page: () => SelectLanguageScreen()),
         GetPage(name: SplashScreen.id, page: () => const SplashScreen()),

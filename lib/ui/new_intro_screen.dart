@@ -4,64 +4,64 @@ import 'package:get/get.dart';
 import 'package:tafsir/ui/add_research.dart';
 import 'package:tafsir/ui/articles_screen/articles_screen.dart';
 import 'package:tafsir/ui/competition_screen.dart';
-import 'package:tafsir/ui/home_sura_screen.dart';
-import 'package:tafsir/ui/read_full_sura_screen/read_full_sura_screen.dart';
-import 'package:tafsir/ui/setting_screen.dart';
 import 'package:tafsir/ui/tags_screen/tags_screen.dart';
-import 'package:tafsir/ui/video_screen/videos_screen.dart';
 
 final List<Map<String, dynamic>> sections = [
+  // {
+  //   'name': "short_explanation",
+  //   'image': 'assets/images/quran.png',
+  //   "callback": () {
+  //     Get.to(() => const HomeSuraScreen());
+  //   },
+  // },
+  // {
+  //   'name': "audio_recitations",
+  //   'image': 'assets/images/audio.png',
+  //   "callback": () {
+  //     Get.toNamed(ReadFullSuraScreen.id);
+  //   },
+  // },
   {
-    'name': "short_explanation",
-    'image': 'assets/images/quran.png',
-    "callback": () {
-      Get.to(() => const HomeSuraScreen());
-    },
-  },
-  {
-    'name': "audio_recitations",
-    'image': 'assets/images/audio.png',
-    "callback": () {
-      Get.toNamed(ReadFullSuraScreen.id);
-    },
-  },
-  {
-    'name': "ARTICLES",
+    // 'name': "ARTICLES",
+    'name': "الابحاث",
     'image': 'assets/images/articles.png',
     "callback": () {
       Get.to(const ArticlesScreen());
     },
   },
   {
-    'name': "semantics",
+    // 'name': "semantics",
+    'name': "المعاني",
     'image': 'assets/images/tags.png',
     "callback": () {
       Get.to(const TagsScreen());
     },
   },
+  // {
+  //   'name': "video_library",
+  //   'image': 'assets/images/video_2.png',
+  //   "callback": () {
+  //     Get.to(const VideosScreen());
+  //   },
+  // },
+  // {
+  //   'name': "settings",
+  //   'image': 'assets/images/settings.png',
+  //   "callback": () {
+  //     Get.to(SettingScreen());
+  //   },
+  // },
   {
-    'name': "video_library",
-    'image': 'assets/images/video_2.png',
-    "callback": () {
-      Get.to(const VideosScreen());
-    },
-  },
-  {
-    'name': "settings",
-    'image': 'assets/images/settings.png',
-    "callback": () {
-      Get.to(SettingScreen());
-    },
-  },
-  {
-    'name': "QUESTIONS",
+    // 'name': "QUESTIONS",
+    'name': "أسئلة تحتاج الي اجابة",
     'image': 'assets/images/answer_icon.png',
     "callback": () {
       Get.toNamed(CompetitionsScreen.id);
     },
   },
   {
-    'name': "UPLOAD_RESEARCH",
+    // 'name': "UPLOAD_RESEARCH",
+    'name': "رفع بحث",
     'image': 'assets/images/research_icon.png',
     "callback": () {
       Get.toNamed(AddResearchView.id);
@@ -101,7 +101,7 @@ class _NewIntroScreenWidgetState extends State<NewIntroScreenWidget> {
                       ).animate().fade().scale(duration: 800.ms),
                       const SizedBox(height: 12),
                       Text(
-                        "app_name".tr,
+                        "الدلالات",
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.brown[800],
@@ -158,7 +158,7 @@ class _NewIntroScreenWidgetState extends State<NewIntroScreenWidget> {
                                     Image.asset(section['image'], height: 40),
                                     const SizedBox(height: 12),
                                     Text(
-                                      (section['name'] as String).tr,
+                                      (section['name'] as String),
                                       style: TextStyle(
                                         color: Colors.brown[700],
                                         fontWeight: FontWeight.w600,
