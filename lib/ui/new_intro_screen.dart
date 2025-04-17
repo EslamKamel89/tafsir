@@ -54,7 +54,7 @@ final List<Map<String, dynamic>> sections = [
   {
     // 'name': "QUESTIONS",
     'name': "أسئلة تحتاج الي اجابة",
-    'image': 'assets/images/answer_icon.png',
+    'image': 'assets/images/questions.png',
     "callback": () {
       Get.toNamed(CompetitionsScreen.id);
     },
@@ -62,7 +62,7 @@ final List<Map<String, dynamic>> sections = [
   {
     // 'name': "UPLOAD_RESEARCH",
     'name': "رفع بحث",
-    'image': 'assets/images/research_icon.png',
+    'image': 'assets/images/research.png',
     "callback": () {
       Get.toNamed(AddResearchView.id);
     },
@@ -89,30 +89,31 @@ class _NewIntroScreenWidgetState extends State<NewIntroScreenWidget> {
               // Logo + App Description
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                color: const Color(0xFFFAF3E0),
+                color: const Color(0xFFFAF3E0).withOpacity(0.2),
                 elevation: 6,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
                     children: [
                       Image.asset(
-                        'assets/images/logo_small new.png',
-                        height: 80,
+                        'assets/images/logo2.png',
+                        // height: 80,
+                        width: double.infinity,
                       ).animate().fade().scale(duration: 800.ms),
-                      const SizedBox(height: 12),
-                      Text(
-                        "الدلالات",
-                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.brown[800],
-                        ),
-                      ).animate().fade(duration: 600.ms).slideY(begin: 0.2),
-                      const SizedBox(height: 8),
-                      Text(
-                        'introText'.tr,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.brown[600], fontSize: 14),
-                      ).animate().fade(delay: 400.ms),
+                      // const SizedBox(height: 12),
+                      // Text(
+                      //   "الدلالات",
+                      //   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      //     fontWeight: FontWeight.bold,
+                      //     color: Colors.brown[800],
+                      //   ),
+                      // ).animate().fade(duration: 600.ms).slideY(begin: 0.2),
+                      // const SizedBox(height: 8),
+                      // Text(
+                      //   'introText'.tr,
+                      //   textAlign: TextAlign.center,
+                      //   style: TextStyle(color: Colors.brown[600], fontSize: 14),
+                      // ).animate().fade(delay: 400.ms),
                     ],
                   ),
                 ),

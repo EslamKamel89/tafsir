@@ -26,7 +26,14 @@ class DefaultText extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) {
-    return Text(txt, style: TextStyle(fontSize: fontSize, fontFamily: "Almarai", color: color));
+    return Text(
+      txt,
+      style: TextStyle(
+        fontSize: fontSize,
+        // fontFamily: "Almarai",
+        color: color,
+      ),
+    );
   }
 }
 
@@ -49,7 +56,7 @@ class LocalizedText extends StatelessWidget {
       maxLines: maxLines,
       style: TextStyle(
         fontSize: fontSize,
-        fontFamily: Get.locale?.languageCode != 'ar' ? null : "Amiri",
+        // fontFamily: Get.locale?.languageCode != 'ar' ? null : "Amiri",
         color: color,
         fontStyle: FontStyle.normal,
         decoration: TextDecoration.none,
