@@ -1,4 +1,4 @@
-package com.example.tafsir
+package com.dubdev.dallalat
 
 import io.flutter.embedding.android.FlutterActivity
 
