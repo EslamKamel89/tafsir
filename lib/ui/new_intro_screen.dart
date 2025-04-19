@@ -5,6 +5,7 @@ import 'package:tafsir/ui/add_research.dart';
 import 'package:tafsir/ui/articles_screen/articles_screen.dart';
 import 'package:tafsir/ui/competition_screen.dart';
 import 'package:tafsir/ui/tags_screen/tags_screen.dart';
+import 'package:tafsir/ui/video_screen/videos_screen.dart';
 
 final List<Map<String, dynamic>> sections = [
   // {
@@ -37,13 +38,14 @@ final List<Map<String, dynamic>> sections = [
       Get.to(const TagsScreen());
     },
   },
-  // {
-  //   'name': "video_library",
-  //   'image': 'assets/images/video_2.png',
-  //   "callback": () {
-  //     Get.to(const VideosScreen());
-  //   },
-  // },
+  {
+    // 'name': "video_library",
+    'name': "مكتبة الفيديو",
+    'image': 'assets/images/video_2.png',
+    "callback": () {
+      Get.to(const VideosScreen());
+    },
+  },
   // {
   //   'name': "settings",
   //   'image': 'assets/images/settings.png',

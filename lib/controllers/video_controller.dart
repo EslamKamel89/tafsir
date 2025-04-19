@@ -23,7 +23,8 @@ class VideoController extends GetxController {
   Future<void> getAllVideos() async {
     VideoControllerData.allVideos = [];
     // VideoControllerData.allVideos = await databaseHelper.getAllVideosRaw();
-    VideoControllerData.allVideos = await getAllVideosApi();
+    await getAllVideosApi();
+    VideoControllerData.allVideos = VideoControllerData.allVideos.reversed.take(2).toList();
     VideoControllerData.filteredVideosList = VideoControllerData.allVideos;
     update();
   }
