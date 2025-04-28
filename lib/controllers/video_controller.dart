@@ -24,7 +24,7 @@ class VideoController extends GetxController {
     VideoControllerData.allVideos = [];
     // VideoControllerData.allVideos = await databaseHelper.getAllVideosRaw();
     await getAllVideosApi();
-    VideoControllerData.allVideos = VideoControllerData.allVideos.reversed.take(2).toList();
+    // VideoControllerData.allVideos = VideoControllerData.allVideos.reversed.take(2).toList();
     VideoControllerData.filteredVideosList = VideoControllerData.allVideos;
     update();
   }

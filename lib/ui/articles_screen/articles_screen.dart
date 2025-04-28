@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tafsir/ui/articles_screen/widgets/normal_article_widget.dart';
 import 'package:tafsir/ui/articles_screen/widgets/series_article_widget.dart';
+import 'package:tafsir/ui/home_sura_screen.dart';
 import 'package:tafsir/widgets/quran_toolbar.dart';
 
 class ArticlesScreen extends StatefulWidget {
@@ -19,35 +21,31 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
     return Scaffold(
       // appBar: QuranBar("articles".tr),
       appBar: QuranBar("الابحاث"),
-      body:
-      //  DefaultTabController(
-      //   length: 2,
-      //   child:
-      Column(
-        children: [
-          // Container(height: 5, color: const Color(0XFFf44235)),
-          Container(height: 5),
-          // Container(height: 5, color: Color(hexToInteger("FFf44235"))),
-          // TabBar(
-          //   indicatorColor: Colors.transparent,
-          //   tabs: [
-          //     TabButton(title: "ARTICLES".tr, selected: currentIndex == 0),
-          //     TabButton(title: "SERIES".tr, selected: currentIndex == 1),
-          //   ],
-          //   onTap: (value) {
-          //     currentIndex = value;
-          //     setState(() {});
-          //   },
-          // ),
-          Expanded(
-            child:
-                currentIndex == 0 || true
-                    ? const NormalArticlesWidget()
-                    : const SeriesArticlesWidget(),
-          ),
-        ],
+      body: DefaultTabController(
+        length: 2,
+        child: Column(
+          children: [
+            // Container(height: 5, color: const Color(0XFFf44235)),
+            Container(height: 5),
+            // Container(height: 5, color: Color(hexToInteger("FFf44235"))),
+            TabBar(
+              indicatorColor: Colors.transparent,
+              tabs: [
+                TabButton(title: "ARTICLES".tr, selected: currentIndex == 0),
+                TabButton(title: "SERIES".tr, selected: currentIndex == 1),
+              ],
+              onTap: (value) {
+                currentIndex = value;
+                setState(() {});
+              },
+            ),
+            Expanded(
+              child:
+                  currentIndex == 0 ? const NormalArticlesWidget() : const SeriesArticlesWidget(),
+            ),
+          ],
+        ),
       ),
-      // ),
     );
   }
 }
