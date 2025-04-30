@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:tafsir/ui/search_by_ayah/search_by_ayah_screen.dart';
 import 'package:tafsir/ui/search_screen.dart';
+import 'package:tafsir/ui/short_explanation_index.dart';
 import 'package:tafsir/utils/colors.dart';
 import 'package:tafsir/utils/is_arabic.dart';
 import 'package:tafsir/utils/text_styles.dart';
@@ -23,7 +24,7 @@ class _HomeSuraScreenState extends State<HomeSuraScreen> with SingleTickerProvid
 
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
     // _tabController!.addListener(() {
     //   setState(() {
     //     currentIndex = _tabController!.index;
@@ -47,11 +48,9 @@ class _HomeSuraScreenState extends State<HomeSuraScreen> with SingleTickerProvid
               indicatorColor: Colors.transparent,
               isScrollable: isArabic() ? false : true,
               tabs: [
-                // TabButton(title: "SHORT_EXPLANATION".tr, selected: currentIndex == 0),
-                // TabButton(title: "SEARCH_BY_WORD".tr, selected: currentIndex == 1),
-                // TabButton(title: "SEARCH_BY_AYAH".tr, selected: currentIndex == 2),
-                TabButton(title: "SEARCH_BY_WORD".tr, selected: currentIndex == 0),
-                TabButton(title: "SEARCH_BY_AYAH".tr, selected: currentIndex == 1),
+                TabButton(title: "SHORT_EXPLANATION".tr, selected: currentIndex == 0),
+                TabButton(title: "SEARCH_BY_WORD".tr, selected: currentIndex == 1),
+                TabButton(title: "SEARCH_BY_AYAH".tr, selected: currentIndex == 2),
               ],
               controller: _tabController!,
               onTap: (value) {
@@ -64,12 +63,12 @@ class _HomeSuraScreenState extends State<HomeSuraScreen> with SingleTickerProvid
           const SizedBox(height: 5),
           Expanded(
             child:
-                // currentIndex == 0
-                //     ? ShortExplanationIndex()
-                //     : currentIndex == 1
-                //     ? SearchScreen()
-                //     : const SearchAyahcreen(),
-                currentIndex == 0 ? SearchScreen() : SearchAyahcreen(),
+                currentIndex == 0
+                    ? ShortExplanationIndex()
+                    : currentIndex == 1
+                    ? SearchScreen()
+                    : const SearchAyahcreen(),
+            // currentIndex == 0 ? SearchScreen() : SearchAyahcreen(),
           ),
         ],
       ),
