@@ -57,7 +57,9 @@ class SplashScreen extends StatelessWidget {
     // final settingController = Get.find<SettingsController>().setSelectedLocale(0);
     Future.delayed(const Duration(seconds: 3), () {
       Widget nextPage =
-          GetStorage().read(language) != null ? const IntroScreen() : SelectLanguageScreen();
+          GetStorage().read(language) != null || true
+              ? const IntroScreen()
+              : SelectLanguageScreen();
       Get.offAll(nextPage);
     });
   }

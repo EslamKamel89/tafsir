@@ -88,8 +88,8 @@ class _DlalatQuranState extends State<DlalatQuran> {
       translations: CurrentLocales(),
       debugShowCheckedModeBanner: false,
       title: 'دلالات القرآن',
-      // home: const SplashScreen(),
-      home: const IntroScreen(),
+      home: const SplashScreen(),
+      // home: const IntroScreen(),
       getPages: [
         GetPage(name: SelectLanguageScreen.id, page: () => SelectLanguageScreen()),
         GetPage(name: SplashScreen.id, page: () => const SplashScreen()),

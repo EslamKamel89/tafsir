@@ -47,22 +47,22 @@ class SettingScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text('language'.tr, style: const TextStyle(fontFamily: 'Almarai')),
-                      ),
-                      Expanded(
-                        flex: 4,
-                        child: Container(
-                          margin: const EdgeInsets.only(left: 8, right: 8),
-                          height: 50,
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                            color: Colors.white,
-                          ),
-                          child: LanguageSpinner(controller),
-                        ),
-                      ),
+                      // Expanded(
+                      //   flex: 1,
+                      //   child: Text('language'.tr, style: const TextStyle(fontFamily: 'Almarai')),
+                      // ),
+                      // Expanded(
+                      //   flex: 4,
+                      //   child: Container(
+                      //     margin: const EdgeInsets.only(left: 8, right: 8),
+                      //     height: 50,
+                      //     decoration: const BoxDecoration(
+                      //       borderRadius: BorderRadius.all(Radius.circular(8)),
+                      //       color: Colors.white,
+                      //     ),
+                      //     child: LanguageSpinner(controller),
+                      //   ),
+                      // ),
                     ],
                   ),
 

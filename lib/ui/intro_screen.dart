@@ -9,7 +9,6 @@ import 'package:tafsir/ui/add_research.dart';
 import 'package:tafsir/ui/articles_screen/articles_screen.dart';
 import 'package:tafsir/ui/competition_screen.dart';
 import 'package:tafsir/ui/home_sura_screen.dart';
-import 'package:tafsir/ui/new_intro_screen.dart';
 import 'package:tafsir/ui/read_full_sura_screen/read_full_sura_screen.dart';
 import 'package:tafsir/ui/setting_screen.dart';
 import 'package:tafsir/ui/tags_screen/tags_screen.dart';
@@ -46,7 +45,7 @@ class _IntroScreenState extends State<IntroScreen> {
     var scHeight = Get.height;
     var scWidth = Get.width;
     // Get.find<ReadFullSurahController>().playFullSura('An-Nas');
-    return const NewIntroScreenWidget();
+    // return const NewIntroScreenWidget();
     return Stack(
       children: [
         SplashBackground(
@@ -277,7 +276,8 @@ class _IntroScreenState extends State<IntroScreen> {
       //   path = 'assets/images/center_view.png';
       //   break;
       default:
-        path = 'assets/images/center_view_en.png';
+        // path = 'assets/images/center_view_en.png';
+        path = 'assets/images/center_view.png';
     }
     return path;
   }

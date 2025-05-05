@@ -5,6 +5,7 @@ import 'package:tafsir/ui/add_research.dart';
 import 'package:tafsir/ui/articles_screen/articles_screen.dart';
 import 'package:tafsir/ui/competition_screen.dart';
 import 'package:tafsir/ui/home_sura_screen.dart';
+import 'package:tafsir/ui/read_full_sura_screen/read_full_sura_screen.dart';
 import 'package:tafsir/ui/tags_screen/tags_screen.dart';
 import 'package:tafsir/ui/video_screen/videos_screen.dart';
 
@@ -17,13 +18,14 @@ final List<Map<String, dynamic>> sections = [
       Get.to(() => const HomeSuraScreen());
     },
   },
-  // {
-  //   'name': "audio_recitations",
-  //   'image': 'assets/images/audio.png',
-  //   "callback": () {
-  //     Get.toNamed(ReadFullSuraScreen.id);
-  //   },
-  // },
+  {
+    'name': "الصوتيات",
+    // 'name': "audio_recitations",
+    'image': 'assets/images/audio.png',
+    "callback": () {
+      Get.toNamed(ReadFullSuraScreen.id);
+    },
+  },
   {
     // 'name': "ARTICLES",
     'name': "الابحاث",
