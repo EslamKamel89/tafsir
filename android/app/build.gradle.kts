@@ -33,8 +33,8 @@ android {
         targetSdk = flutter.targetSdkVersion
         // versionCode = flutter.versionCode
         // versionName = flutter.versionName
-        versionCode = 7
-        versionName = "1.0.7"
+        versionCode = 8
+        versionName = "1.0.8"
     }
 
     signingConfigs {
